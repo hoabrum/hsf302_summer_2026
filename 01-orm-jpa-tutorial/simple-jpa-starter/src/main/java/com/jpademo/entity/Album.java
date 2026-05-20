@@ -1,9 +1,6 @@
 package com.jpademo.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -17,7 +14,16 @@ public class Album {
     private String description;
     private int views;
 
-    @OneToMany(mappedBy = "album")
+    public Album() {
+    }
+
+    public Album(int id, String description, int views) {
+        this.id = id;
+        this.description = description;
+        this.views = views;
+    }
+
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Photo> photos;
 
     public List<Photo> getPhotos() {
@@ -50,5 +56,15 @@ public class Album {
 
     public void setView(int views) {
         this.views = views;
+    }
+
+    @Override
+    public String toString() {
+        return "Album{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", views=" + views +
+                ", photos=" + photos +
+                '}';
     }
 }

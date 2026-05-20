@@ -21,6 +21,15 @@ public class Photo {
     private LocalDate uploadDate;
     private String imagePath;
 
+    public Photo() {
+    }
+
+    public Photo(int id, String title, String description) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+    }
+
     public Album getAlbum() {
         return album;
     }
