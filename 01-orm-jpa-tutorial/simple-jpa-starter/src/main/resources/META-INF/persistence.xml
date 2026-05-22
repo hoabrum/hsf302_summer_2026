@@ -17,7 +17,7 @@
             <property name="hibernate.format_sql" value="true" />
 
             <!-- Schema generation option: none, create-only, drop-only, create, drop-and-create -->
-            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create" />
+            <property name="jakarta.persistence.schema-generation.database.action" value="none" />
         </properties>
 
     </persistence-unit>
