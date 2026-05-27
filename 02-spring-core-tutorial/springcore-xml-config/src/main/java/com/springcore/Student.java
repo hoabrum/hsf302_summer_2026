@@ -6,6 +6,17 @@ public class Student {
     private String fullName;
     private int age;
 
+    private Laptop laptop;
+
+
+    public Laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(Laptop laptop) {
+        this.laptop = laptop;
+    }
+
     public int getId() {
         return id;
     }
@@ -36,6 +47,7 @@ public class Student {
                 "id=" + id +
                 ", fullName='" + fullName + '\'' +
                 ", age=" + age +
+                ", laptop=" + laptop +
                 '}';
     }
 }

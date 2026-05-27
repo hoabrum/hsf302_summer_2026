@@ -10,6 +10,12 @@
         <property name="id" value="100"/>
         <property name="fullName" value="Tom Cruise"/>
         <property name="age" value="70"/>
+        <property name="laptop" ref="laptop"/>
+    </bean>
+
+    <bean id = "laptop" class="com.springcore.Laptop">
+        <property name="model" value="Dell XPS 2026"/>
+        <property name="price" value="20000"/>
     </bean>
 
 </beans>
