@@ -15,5 +15,7 @@ public class App
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
         Student st1 = (Student)ctx.getBean("student");
         System.out.println(st1);
+        StudentDAO studentDAO = (StudentDAO)ctx.getBean("studentDAO");
+        studentDAO.search("Learning Java in 21 days");
     }
 }

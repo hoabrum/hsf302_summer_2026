@@ -8,6 +8,19 @@ public class Student {
 
     private Laptop laptop;
 
+    private Laptop macPro;
+
+    public Student() {
+
+    }
+
+    public Student(Laptop macPro) {
+        this.macPro = macPro;
+    }
+
+    public Laptop getMacPro() {
+        return macPro;
+    }
 
     public Laptop getLaptop() {
         return laptop;
@@ -48,6 +61,7 @@ public class Student {
                 ", fullName='" + fullName + '\'' +
                 ", age=" + age +
                 ", laptop=" + laptop +
+                ", macPro=" + macPro +
                 '}';
     }
 }

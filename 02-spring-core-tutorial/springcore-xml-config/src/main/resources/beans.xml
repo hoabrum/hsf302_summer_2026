@@ -11,11 +11,21 @@
         <property name="fullName" value="Tom Cruise"/>
         <property name="age" value="70"/>
         <property name="laptop" ref="laptop"/>
+        <constructor-arg ref="macPro"/>
     </bean>
 
     <bean id = "laptop" class="com.springcore.Laptop">
         <property name="model" value="Dell XPS 2026"/>
         <property name="price" value="20000"/>
+    </bean>
+
+    <bean id = "macPro" class="com.springcore.Laptop">
+        <property name="model" value="Mac Pro 2026"/>
+        <property name="price" value="500000"/>
+    </bean>
+
+    <bean id="studentDAO" class="com.springcore.StudentDAOImpl">
+
     </bean>
 
 </beans>
