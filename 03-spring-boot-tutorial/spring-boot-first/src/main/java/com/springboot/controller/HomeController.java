@@ -1,6 +1,8 @@
 package com.springboot.controller;
 
 import com.springboot.entity.Student;
+import com.springboot.repository.StudentRepository;
+import com.springboot.service.StudentService;
 import com.springboot.utils.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -11,22 +13,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-    @Autowired
-    Student student;
+    private StudentService studentService;
 
     @Autowired
-    Environment env;
-
-    private DateUtil dateUtil;
-
-    @Autowired
-    public HomeController(DateUtil dateUtil) {
-        this.dateUtil = dateUtil;
+    public HomeController(StudentService studentService) {
+        this.studentService = studentService;
     }
 
     @GetMapping("/home")
     public @ResponseBody String home() {
         System.out.println("Home Page");
-        return "Welcome to Spring Boot: " + student + dateUtil.getCurrentDate() + env.getProperty("spring.application.name");
+        Student student = new Student();
+        student.setFullName("Tom Cruise");
+        student.setAge(18);
+        studentService.saveStudent(student);
+        return "Welcome to Spring Boot: " + student;
     }
 }
