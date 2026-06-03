@@ -1,11 +1,20 @@
 package com.springboot.entity;
 
-import org.springframework.stereotype.Component;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "students", schema = "dbo")
 public class Student {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "student_id")
     private int id;
+
+    @Column(name = "full_name")
     private String fullName;
+
+    @Column(name = "age")
     private int age;
 
     public Student() {
