@@ -1,4 +1,6 @@
-package com.springcore;
+package com.springboot.entity;
+
+import org.springframework.stereotype.Component;
 
 public class Student {
 
@@ -6,29 +8,13 @@ public class Student {
     private String fullName;
     private int age;
 
-    private Laptop laptop;
-
-    private Laptop macPro;
-
     public Student() {
-
     }
 
-    public Student(Laptop macPro) {
-        this.macPro = macPro;
-        System.out.println("Student Constructor No params");
-    }
-
-    public Laptop getMacPro() {
-        return macPro;
-    }
-
-    public Laptop getLaptop() {
-        return laptop;
-    }
-
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
+    public Student(int id, String fullName, int age) {
+        this.id = id;
+        this.fullName = fullName;
+        this.age = age;
     }
 
     public int getId() {
@@ -61,8 +47,6 @@ public class Student {
                 "id=" + id +
                 ", fullName='" + fullName + '\'' +
                 ", age=" + age +
-                ", laptop=" + laptop +
-                ", macPro=" + macPro +
                 '}';
     }
 }

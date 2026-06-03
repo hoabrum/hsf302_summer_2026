@@ -6,7 +6,7 @@
 
     <!-- bean definitions here -->
 
-    <bean id="student" class="com.springcore.Student">
+    <bean id="student" class="com.springcore.Student" scope="prototype" >
         <property name="id" value="100"/>
         <property name="fullName" value="Tom Cruise"/>
         <property name="age" value="70"/>

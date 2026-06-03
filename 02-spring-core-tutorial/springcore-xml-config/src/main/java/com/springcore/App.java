@@ -14,8 +14,15 @@ public class App
         //System.out.println( "Hello World!" );
         ApplicationContext ctx = new ClassPathXmlApplicationContext("beans.xml");
         Student st1 = (Student)ctx.getBean("student");
-        System.out.println(st1);
-        StudentDAO studentDAO = (StudentDAO)ctx.getBean("studentDAO");
-        studentDAO.search("Learning Java in 21 days");
+        //System.out.println(st1);
+
+        Student st2 = (Student)ctx.getBean("student");
+        //System.out.println(st2);
+
+        Student st3 = (Student)ctx.getBean("student");
+        //System.out.println(st3);
+
+        //StudentDAO studentDAO = (StudentDAO)ctx.getBean("studentDAO");
+        //studentDAO.search("Learning Java in 21 days");
     }
 }
