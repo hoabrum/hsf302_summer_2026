@@ -1,5 +1,6 @@
 package com.springboot.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -28,6 +29,7 @@ public class Order {
     @Column(name = "comments")
     private String comment;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "customer_id")
     private Customer customer;
