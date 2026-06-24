@@ -51,8 +51,8 @@ public class DataLoader implements CommandLineRunner {
         List<Order> ordersGroup3 = Arrays.asList(order7, order8, order9);
         customer3.setOrders(ordersGroup3);
 
-        customerRepository.save(customer1);
-        customerRepository.save(customer2);
-        customerRepository.save(customer3);
+        //customerRepository.save(customer1);
+        //customerRepository.save(customer2);
+        //customerRepository.save(customer3);
     }
 }
