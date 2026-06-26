@@ -27,7 +27,7 @@ public class SigninController {
         return "sign-in";
     }
 
-    @PostMapping("/sign-in")//endpoint
+    @PostMapping("/sign-in")
     public ModelAndView signin(@ModelAttribute SigninDTO signinDTO) {
         ModelAndView mv = new ModelAndView();
         System.out.println(signinDTO);

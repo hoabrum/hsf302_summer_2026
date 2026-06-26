@@ -5,6 +5,8 @@ import com.springboot.demo.repository.UserRepository;
 import com.springboot.demo.service.UserService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -17,5 +19,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean saveUserInfo(User user) {
         return userRepository.save(user) != null;
+    }
+
+    @Override
+    public List<User> getUserInfo() {
+        return userRepository.findAll();
     }
 }
